@@ -26,12 +26,10 @@
 
 건물 마스크로부터 연속적인 위험장을 생성합니다.
 
-- Screened Poisson 기반 필드 생성
-- Heavy-tail 확장 (완만한 영향 범위)
-- 다중 건물 채널 분리
-
-- FFT 기반 필터링으로 필드 생성 :contentReference[oaicite:1]{index=1}  
-- 건물 주변 위험이 부드럽게 퍼짐
+#### Screened Poisson 기반 필드 생성
+$$
+\Phi = \mathcal{F}^{-1} \left( \frac{\mathcal{F}(B)}{(1 + \lambda k^2)^q} \right)
+$$
 
 ---
 
