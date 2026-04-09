@@ -27,6 +27,7 @@
 건물 마스크로부터 연속적인 위험장을 생성합니다.
 
 #### Screened Poisson 기반 필드 생성
+
 $$
 \Phi = \mathcal{F}^{-1} \left( \frac{\mathcal{F}(B)}{(1 + \lambda k^2)^q} \right)
 $$
@@ -39,12 +40,14 @@ $$
 
 #### (1) 겹침 개수 (Multiplicity)
 여러 채널이 동시에 활성화되는 정도를 측정
+
 $$
 n_{\text{soft}}(x) = \sum_{i=1}^{N} \sigma\left(\frac{\phi_i(x) - \tau}{\beta}\right)
 $$
 
 #### (2) 겹침 강도 (Strength)
 몇 개의 건물이 동시에 영향을 주는지 측정
+
 $$
 R_{\alpha}(x) = \frac{1}{\alpha} \log \left( \sum_{i=1}^{N} e^{\alpha \phi_i(x)} \right)
 $$
@@ -52,6 +55,7 @@ $$
 
 #### (3) 겹침 코어 (Core)
 단일 위험보다 **진짜 위험한 중심 영역** 추출
+
 $$
 P(x) = \sum_{i<j} \phi_i(x)\phi_j(x)
 $$
