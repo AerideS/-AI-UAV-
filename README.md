@@ -22,6 +22,8 @@
 
 ### 1. Risk Field Modeling
 
+![title](docs/figures/structure.png)
+
 건물 마스크로부터 연속적인 위험장을 생성합니다.
 
 - Screened Poisson 기반 필드 생성
