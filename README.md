@@ -39,22 +39,25 @@ $$
 
 #### (1) 겹침 개수 (Multiplicity)
 여러 채널이 동시에 활성화되는 정도를 측정
-$$
+```math
 n_{\text{soft}}(x) = \sum_{i=1}^{N} \sigma\left(\frac{\phi_i(x) - \tau}{\beta}\right)
-$$
+- \( \phi_i(x) \): i번째 건물의 risk field  
+- \( \tau \): 임계값 (activation threshold)  
+- \( \beta \): 부드러움 (작을수록 sharp)
+- \( \sigma(x) = \frac{1}{1 + e^{-x}} \)
 
 #### (2) 겹침 강도 (Strength)
 몇 개의 건물이 동시에 영향을 주는지 측정
-$$
+```markdown
+```math
 R_{\alpha}(x) = \frac{1}{\alpha} \log \left( \sum_{i=1}^{N} e^{\alpha \phi_i(x)} \right)
-$$
 
 
 #### (3) 겹침 코어 (Core)
 단일 위험보다 **진짜 위험한 중심 영역** 추출
-$$
+```markdown
+```math
 P(x) = \sum_{i<j} \phi_i(x)\phi_j(x)
-$$
 
 ---
 
