@@ -59,6 +59,7 @@ $$
 $$
 P(x) = \sum_{i<j} \phi_i(x)\phi_j(x)
 $$
+
 ---
 
 ### 3. Corridor-aware Risk
