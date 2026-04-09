@@ -57,7 +57,7 @@ $$
 단일 위험보다 **진짜 위험한 중심 영역** 추출
 
 $$
-P(x) = \sum_{i<j} \phi_i(x)\phi_j(x)
+P(x) = \sum_{i \lt j} \phi_i(x)\phi_j(x)
 $$
 
 ---
