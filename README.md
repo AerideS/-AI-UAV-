@@ -39,6 +39,9 @@ $$
 단순 거리 기반이 아니라:
 
 #### (1) 겹침 개수 (Multiplicity)
+
+![m](docs/figures/m.png)
+
 여러 채널이 동시에 활성화되는 정도를 측정
 
 $$
@@ -46,6 +49,9 @@ n_{\text{soft}}(x) = \sum_{i=1}^{N} \sigma\left(\frac{\phi_i(x) - \tau}{\beta}\r
 $$
 
 #### (2) 겹침 강도 (Strength)
+
+![m](docs/figures/s.png)
+
 몇 개의 건물이 동시에 영향을 주는지 측정
 
 $$
@@ -54,6 +60,9 @@ $$
 
 
 #### (3) 겹침 코어 (Core)
+
+![m](docs/figures/c.png)
+
 단일 위험보다 **진짜 위험한 중심 영역** 추출
 
 $$
