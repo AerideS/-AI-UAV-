@@ -54,22 +54,24 @@
 - 최근접 건물 거리 기반
 - 협로 지수 적용
 
-👉 좁은 통로일수록 위험 증가
+좁은 통로일수록 위험 증가
 
 ---
 
 ### 4. Safety Parameter (User Intent)
+
+![title](docs/figures/mission.png)
 
 사용자 성향을 직접 반영:
 
 - safety = 0 → 공격적 (짧은 경로)
 - safety = 1 → 안전 (우회 경로)
 
-👉 위험장의 형태 자체가 변형됨
+**위험장의 형태 자체가 변형됨**
 
 ---
 
-## 🧠 Reinforcement Learning
+##  Reinforcement Learning
 
 ### State
 
@@ -88,13 +90,3 @@
 - 시간 패널티
 - 충돌 패널티
 - 위험도 감소 보상
-
----
-
-## 🏗️ Code Structure
-
-```bash
-risk_field/
-├── poisson.py        # Screened Poisson field
-├── combine.py        # strength / multiplicity / core
-├── postprocess.py    # safety parameter
