@@ -66,8 +66,7 @@ $$
 **FIRAS function**
 
 <div align="center">
-  <img src=".\docs\figures\repulsive.png
-" width="400"/>
+  <img src=".\docs\figures\repulsive.png" width="400"/>
 </div>
 
 $$
@@ -86,7 +85,7 @@ $$
 
 <div align="center">
   <img src=".\docs\figures\poisson.png
-" width="500"/>
+" width="400"/>
 </div>
 
 $$
@@ -102,7 +101,7 @@ $$
 
 <div align="center">
   <img src=".\docs\figures\drl.png
-" width="800"/>
+" width="400"/>
 </div>
 
 #### 3.3.1. On policy 방식
