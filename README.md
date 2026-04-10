@@ -99,7 +99,7 @@ $$
 강화학습과 딥러닝을 결합한 방법으로 경험을 통해 스스로 최적의 행동을 배우는 **신경망 기반 의사결정 방법**
 
 <div align="center">
-  <img src=".\docs\figures\drl.png" width="400"/>
+  <img src=".\docs\figures\drl.png" width="600"/>
 </div>
 
 #### 3.3.1. On policy 방식
