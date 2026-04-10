@@ -112,12 +112,16 @@ $$
 " width="400"/>
 </div>
 
+ㅎㅇ
+
 #### 3.3.2. Off policy 방식
 
 <div align="center">
   <img src=".\docs\figures\offrl.png
 " width="400"/>
 </div>
+
+ㅎㅇ
 
 ---
 
