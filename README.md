@@ -25,15 +25,20 @@
 ## 3. 관련 연구
 
 ### 3.1. APF(Artificial Potential Field) 
-![title](docs/figures/apf.webp)
 
-> 로봇이나 드론의 경로 계획 방법 중 하나로, **목표를 잡아당기는 힘(인력), 장애물은 밀어내는 가상의 힘(척력)** 을 만들어서 이동시키는 방법
-
+로봇이나 드론의 경로 계획 방법 중 하나로, **목표를 잡아당기는 힘(인력), 장애물은 밀어내는 가상의 힘(척력)** 을 만들어서 이동시키는 방법
 최근 다양한 UAV 경로 계획, 장애물 회피 연구에서 활용되고 있음[1][2].
+
+
+<div align="center">
+  <img src=".\docs\figures\apf.webp" width="800"/>
+</div>
 
 #### 3.1.1. APF(Artificial Potential Field) 종류
 
-**인력**
+##### 인력
+
+**Parabolic function**
 
 <div align="center">
   <img src=".\docs\figures\parabolic.png" width="400"/>
@@ -43,19 +48,86 @@ $$
 U^{a_p}(Q) = \frac{1}{2}k^a(d(Q))^2
 $$
 
-**척력**
+**Conical function**
+
+<div align="center">
+  <img src=".\docs\figures\conical.png" width="400"/>
+</div>
+
+$$
+\begin{cases}
+U^{a}(Q) = \frac{1}{2} k^{a} d^{2}(Q) \\
+f^{a}(Q) = -\nabla U^{a}(Q) = k^{a} (Q_g - Q)
+\end{cases}
+$$
+
+##### 척력
+
+**FIRAS function**
+
+<div align="center">
+  <img src=".\docs\figures\repulsive.png
+" width="400"/>
+</div>
+
+$$
+U_i^{r}(Q) =
+\begin{cases}
+\frac{1}{2} k_i^{r} \left( \frac{1}{d_i(Q)} - \frac{1}{d_i^{0}} \right)^2 & \text{if } d_i(Q) \le d_i^{0} \\
+0 & \text{otherwise}
+\end{cases}
+$$
 
 ---
 
-### 1. 위험장 모델링
+### 3.2 하모닉 필드(Harmonic field)
+
+라플라스 방정식을 만족하는 필드로, 균형 잡힌 장(field)를 만들 수 있음. 기존 연구 로봇 경로 계획에 하모닉 필드를 응용한 연구가 있음[3].
+
+<div align="center">
+  <img src=".\docs\figures\poisson.png
+" width="500"/>
+</div>
+
+$$
+\nabla^2 u = 0
+$$
+
+
+---
+
+### 3.3. 심층 강화학습 (Deep reinforcement learning)
+
+강화학습과 딥러닝을 결합한 방법으로 경험을 통해 스스로 최적의 행동을 배우는 **신경망 기반 의사결정 방법**
+
+<div align="center">
+  <img src=".\docs\figures\drl.png
+" width="800"/>
+</div>
+
+#### 3.3.1. On policy 방식
+
+<div align="center">
+  <img src=".\docs\figures\orl.png
+" width="400"/>
+</div>
+
+#### 3.3.2. Off policy 방식
+
+<div align="center">
+  <img src=".\docs\figures\offrl.png
+" width="400"/>
+</div>
+
+---
+
+## 4. 제안 방법
 
 ![title](docs/figures/structure.png)
 
 건물 마스크로부터 연속적인 위험장을 생성합니다.
 
 #### Screened Poisson 기반 필드 생성
-
-![title](docs/figures/structure.png)
 
 $$
 \Phi = \mathcal{F}^{-1} \left( \frac{\mathcal{F}(B)}{(1 + \lambda k^2)^q} \right)
@@ -151,5 +223,4 @@ $$
 keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
 [2] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787.
 keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
-
-
+[3] Connolly, Christopher I., and Roderic A. Grupen. "The applications of harmonic functions to robotics." Journal of robotic Systems 10.7 (1993): 931-946.
