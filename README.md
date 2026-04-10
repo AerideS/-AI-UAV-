@@ -5,12 +5,14 @@
 ![title](docs/figures/title.png)
 ---
 
-## 개요
+## 1. 개요
 
 도심 환경에서 UAV의 안전한 항법을 위한 연구 프로젝트입니다.  
 건물 밀집도, 협로(corridor), 사용자 성향(조심/과감)을 반영한 **Risk Field 기반 강화학습**을 목표로 합니다.
 
-## Problem Definition
+---
+
+## 2. 문제 정의
 
 도심 UAV 운용에서는 다음과 같은 문제가 존재합니다:
 
@@ -20,7 +22,32 @@
 
 ---
 
-### 1. Risk Field Modeling
+## 3. 관련 연구
+
+### 3.1. APF(Artificial Potential Field) 
+![title](docs/figures/apf.webp)
+
+> 로봇이나 드론의 경로 계획 방법 중 하나로, **목표를 잡아당기는 힘(인력), 장애물은 밀어내는 가상의 힘(척력)** 을 만들어서 이동시키는 방법
+
+최근 다양한 UAV 경로 계획, 장애물 회피 연구에서 활용되고 있음[1][2].
+
+#### 3.1.1. APF(Artificial Potential Field) 종류
+
+**인력**
+
+<div align="center">
+  <img src=".\docs\figures\parabolic.png" width="400"/>
+</div>
+
+$$
+U^{a_p}(Q) = \frac{1}{2}k^a(d(Q))^2
+$$
+
+**척력**
+
+---
+
+### 1. 위험장 모델링
 
 ![title](docs/figures/structure.png)
 
@@ -28,15 +55,17 @@
 
 #### Screened Poisson 기반 필드 생성
 
+![title](docs/figures/structure.png)
+
 $$
 \Phi = \mathcal{F}^{-1} \left( \frac{\mathcal{F}(B)}{(1 + \lambda k^2)^q} \right)
 $$
 
 ---
 
-### 2. Overlap-aware Risk Enhancement
+### 2. 중첩 위험장 강화
 
-단순 거리 기반이 아니라:
+단순 거리 기반 → 위험장이 겹치는 부분은 크게 강화
 
 #### (1) 겹침 개수 (Multiplicity)
 
@@ -114,3 +143,13 @@ $$
 - 시간 패널티
 - 충돌 패널티
 - 위험도 감소 보상
+
+---
+
+참고 문헌
+[1] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787.
+keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
+[2] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787.
+keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
+
+
