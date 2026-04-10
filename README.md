@@ -104,29 +104,49 @@ $$
 
 #### 3.3.1. On policy 방식
 
+**현재 정책으로 행동**하고, 그 데이터로 바로 학습; **rollout 개념**
+예시) PPO(Proximal Policy Optimization) [4]
+
 <div align="center">
   <img src=".\docs\figures\orl.png" width="400"/>
 </div>
 
-ㅎㅇ
 
 #### 3.3.2. Off policy 방식
+
+**이전(다른) 정책 포함** 모은 데이터로 학습, **Replay buffer 개념**
+예시) Deep Q-Network(DQN) [5]
 
 <div align="center">
   <img src=".\docs\figures\offrl.png" width="400"/>
 </div>
 
-ㅎㅇ
 
 ---
 
 ## 4. 제안 방법
 
-![title](docs/figures/structure.png)
+<div align="center">
+  <img src=".\docs\figures\mission.png" width="500"/>
+</div>
+
+
+### 4.1. 위험장 생성
+
+<div align="center">
+  <img src=".\docs\figures\structure.png" width="700"/>
+</div>
+
 
 건물 마스크로부터 연속적인 위험장을 생성합니다.
 
-#### Screened Poisson 기반 필드 생성
+#### 4.1.1. 하모닉 필드 기반 필드 생성
+
+건물 6개를 채널 별로 나눠 필드 생성
+
+<div align="center">
+  <img src=".\docs\figures\harmony.png" width="500"/>
+</div>
 
 $$
 \Phi = \mathcal{F}^{-1} \left( \frac{\mathcal{F}(B)}{(1 + \lambda k^2)^q} \right)
@@ -134,13 +154,15 @@ $$
 
 ---
 
-### 2. 중첩 위험장 강화
+#### 4.1.2. 중첩 위험장 강화
 
 단순 거리 기반 → 위험장이 겹치는 부분은 크게 강화
 
-#### (1) 겹침 개수 (Multiplicity)
+##### (1) 겹침 개수 (Multiplicity)
 
-![m](docs/figures/m.png)
+<div align="center">
+  <img src=".\docs\figures\m.png" width="400"/>
+</div>
 
 여러 채널이 동시에 활성화되는 정도를 측정
 
@@ -148,9 +170,12 @@ $$
 M(x) = \sum_{i=1}^{N} \sigma\left(\frac{\phi_i(x) - \tau}{\beta}\right)
 $$
 
-#### (2) 겹침 강도 (Strength)
+##### (2) 겹침 강도 (Strength)
 
-![m](docs/figures/s.png)
+<div align="center">
+  <img src=".\docs\figures\s.png" width="400"/>
+</div>
+
 
 몇 개의 건물이 동시에 영향을 주는지 측정
 
@@ -159,15 +184,23 @@ M(x) = \frac{1}{\alpha} \log \left( \sum_{i=1}^{N} e^{\alpha \phi_i(x)} \right)
 $$
 
 
-#### (3) 겹침 코어 (Core)
+##### (3) 겹침 코어 (Core)
 
-![m](docs/figures/c.png)
+<div align="center">
+  <img src=".\docs\figures\c.png" width="400"/>
+</div>
+
 
 단일 위험보다 **진짜 위험한 중심 영역** 추출
 
 $$
 C(x) = \sum_{i \lt j} \phi_i(x)\phi_j(x)
 $$
+
+---
+
+### 4.2. 지역 위험 지도 | 전역 위험 지도
+
 
 ---
 
@@ -183,8 +216,6 @@ $$
 ---
 
 ### 4. Safety Parameter (User Intent)
-
-![title](docs/figures/mission.png)
 
 사용자 성향을 직접 반영:
 
@@ -223,3 +254,5 @@ keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehi
 [2] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787.
 keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
 [3] Connolly, Christopher I., and Roderic A. Grupen. "The applications of harmonic functions to robotics." Journal of robotic Systems 10.7 (1993): 931-946.
+[4] Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347.
+[5] Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D., & Riedmiller, M. (2013). Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602.
