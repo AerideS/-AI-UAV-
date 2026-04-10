@@ -248,11 +248,9 @@ $$
 
 ---
 
-참고 문헌
-[1] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787.
-keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
-[2] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787.
-keywords: {Force;Path planning;Collision avoidance;Planning;Unmanned aerial vehicles;Task analysis;Symmetric matrices;Multi-UAV system;path planning;formation control;artificial potential field},
-[3] Connolly, Christopher I., and Roderic A. Grupen. "The applications of harmonic functions to robotics." Journal of robotic Systems 10.7 (1993): 931-946.
-[4] Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347.
+참고 문헌 <br/>
+[1] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787. <br/>
+[2] Z. Pan, C. Zhang, Y. Xia, H. Xiong and X. Shao, "An Improved Artificial Potential Field Method for Path Planning and Formation Control of the Multi-UAV Systems," in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 69, no. 3, pp. 1129-1133, March 2022, doi: 10.1109/TCSII.2021.3112787. <br/>
+[3] Connolly, Christopher I., and Roderic A. Grupen. "The applications of harmonic functions to robotics." Journal of robotic Systems 10.7 (1993): 931-946. <br/>
+[4] Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347. <br/>
 [5] Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D., & Riedmiller, M. (2013). Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602.
