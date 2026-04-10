@@ -84,8 +84,7 @@ $$
 라플라스 방정식을 만족하는 필드로, 균형 잡힌 장(field)를 만들 수 있음. 기존 연구 로봇 경로 계획에 하모닉 필드를 응용한 연구가 있음[3].
 
 <div align="center">
-  <img src=".\docs\figures\poisson.png
-" width="400"/>
+  <img src=".\docs\figures\poisson.png" width="400"/>
 </div>
 
 $$
@@ -100,15 +99,13 @@ $$
 강화학습과 딥러닝을 결합한 방법으로 경험을 통해 스스로 최적의 행동을 배우는 **신경망 기반 의사결정 방법**
 
 <div align="center">
-  <img src=".\docs\figures\drl.png
-" width="400"/>
+  <img src=".\docs\figures\drl.png" width="400"/>
 </div>
 
 #### 3.3.1. On policy 방식
 
 <div align="center">
-  <img src=".\docs\figures\orl.png
-" width="400"/>
+  <img src=".\docs\figures\orl.png" width="400"/>
 </div>
 
 ㅎㅇ
@@ -116,8 +113,7 @@ $$
 #### 3.3.2. Off policy 방식
 
 <div align="center">
-  <img src=".\docs\figures\offrl.png
-" width="400"/>
+  <img src=".\docs\figures\offrl.png" width="400"/>
 </div>
 
 ㅎㅇ
