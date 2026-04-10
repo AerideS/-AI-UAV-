@@ -201,21 +201,18 @@ $$
 
 ### 4.2. 지역 위험 지도 | 전역 위험 지도
 
+<div align="center">
+  <img src=".\docs\figures\global_local.png" width="500"/>
+</div>
 
 ---
 
-### 3. Corridor-aware Risk
+## 5. Safety Parameter (User Intent)
 
-협로 위험을 별도로 모델링:
+<div align="center">
+  <img src=".\docs\figures\safety_level.png" width="700"/>
+</div>
 
-- 최근접 건물 거리 기반
-- 협로 지수 적용
-
-좁은 통로일수록 위험 증가
-
----
-
-### 4. Safety Parameter (User Intent)
 
 사용자 성향을 직접 반영:
 
