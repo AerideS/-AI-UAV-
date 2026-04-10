@@ -201,8 +201,19 @@ $$
 
 ### 4.2. 지역 위험 지도 | 전역 위험 지도
 
+**전역 위험 지도**는 위성사진에서 장애물의 영향을 반영하여 넓은 범위의 경로 흐름을 형성하는데 사용된다.
+**지역 위험 지도**는 센서 기반 위험 정보를 통해 국소적인 의사결정을 위해 사용된다.
+
 <div align="center">
-  <img src=".\docs\figures\global_local.png" width="500"/>
+  <img src=".\docs\figures\global_local.png" width="600"/>
+</div>
+
+#### 4.2.1. 샘플링 기반 후보 경로 생성
+
+RRT(Rapidly-exploring Random Trees Star)을 이용해 여러 경로를 생성한다.
+
+<div align="center">
+  <img src=".\docs\figures\rrt.png" width="300"/>
 </div>
 
 ---
@@ -224,6 +235,15 @@ $$
 ---
 
 ##  Reinforcement Learning
+
+**본 구조는 이미지 기반 위험 정보와 상태 벡터를 함께 사용하는 강화학습 네트워크이다.**
+입력으로 다중 비트맵 형태의 환경 정보(장애물, 위험장)을 CNN을 통해 특징(feature)으로 추출하고, 이를 벡터로 변환한다.
+이후 위치 등 상태 정보와 결합하여 FC(Fully Connected Network)에 입력되며, **최종적으로 정책을 출력**한다.
+
+<div align="center">
+  <img src=".\docs\figures\rf.png" width="900"/>
+</div>
+
 
 ### State
 
